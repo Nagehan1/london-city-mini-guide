@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Button} from "react-bootstrap";
-import Form from 'react-bootstrap/Form';
+
 import CityTable from './CityTable.jsx'
 
 function Guide() {
@@ -30,16 +29,16 @@ useEffect(() => {
 
   return (
         <div>
-            <Form.Select style={{margin:"10px",width:"200px"}} onChange={handleCity}>
+            <select style={{margin:"10px",width:"200px"}} onChange={handleCity}>
                 <option value="harrow">Harrow</option>
                 <option value="heathrow">Heathrow</option>
                 <option value="startford">Startford</option>
-            </Form.Select>
+            </select>
             <div>
-                <Button variant={"outline-primary"} style={{margin:"10px"}} onClick={handleCategory} value={'doctors'}>Doctors</Button>
-                <Button  variant={"outline-danger"} style={{margin:"10px"}} onClick={handleCategory} value={'pharmacies'}>Pharmacies</Button>
-                <Button  variant={"outline-info"} style={{margin:"10px"}} onClick={handleCategory} value={'colleges'}>Colleges</Button>
-                <Button variant={"outline-dark"} style={{margin:"10px"}} onClick={handleCategory} value={'hospitals'}>Hospitals</Button>
+                <button variant={"outline-primary"} style={{margin:"10px"}} onClick={handleCategory} value={'doctors'}>Doctors</button>
+                <button  variant={"outline-danger"} style={{margin:"10px"}} onClick={handleCategory} value={'pharmacies'}>Pharmacies</button>
+                <button  variant={"outline-info"} style={{margin:"10px"}} onClick={handleCategory} value={'colleges'}>Colleges</button>
+                <button variant={"outline-dark"} style={{margin:"10px"}} onClick={handleCategory} value={'hospitals'}>Hospitals</button>
             </div>
             <div>
                 <CityTable data={data}/>

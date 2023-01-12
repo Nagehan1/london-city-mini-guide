@@ -1,10 +1,10 @@
 import React from 'react';
-import {Table} from "react-bootstrap";
+
 
 const CityTable = (props) => {
     return (
         <div>
-            <Table xm striped bordered hover style={{margin:"8px"}} >
+            <table style={{margin:"8px" , border:"1px solid red"}} >
                 <thead>
                 <tr>
                     <th>name</th>
@@ -25,7 +25,7 @@ const CityTable = (props) => {
                     )}
                 )}
                 </tbody>
-            </Table>
+            </table>
         </div>
     );
 };
