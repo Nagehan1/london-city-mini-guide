@@ -1,11 +1,16 @@
 
 const express = require("express");
+
 const app = express();
+const cors = require('cors');
 const port = 3002;
 const harrow = require("./data/Harrow.json");
 const heathrow = require("./data/Heathrow.json");
 const stratford = require("./data/Stratford.json");
 
+app.use(cors({
+    origin: 'http://localhost:3000',
+}));
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 })
